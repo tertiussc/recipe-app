@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+        <form>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" #nameInput>
+                </div>
+                <div class="col-md-2 form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" class="form-control" #amountInput>
+                </div>
+                <div class="col-12">
+                    <button class="full-width btn-min-width mb-2 mr-2 btn btn-success" type="submit"
+                        (click)="onAddItem()">Add <i class="fas fa-plus"></i></button>
+                    <button class="full-width btn-min-width mb-2 mr-2 btn btn-danger" type="button">Delete <i
+                            class="fas fa-trash-alt"></i></button>
+                    <button class="full-width btn-min-width mb-2 mr-2 btn btn-secondary">Clear <i
+                            class="fas fa-broom"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

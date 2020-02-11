@@ -1,0 +1,6 @@
+<div class="list-group">
+    <a href="#" class="list-group-item text-decoration-none text-dark mb-0 h5 text-center"
+        (click)="onSelected()">{{recipe.name}}</a>
+    <p class="list-group-item text-secondary">{{recipe.description}}
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid float-right w-25"></p>
+</div>
