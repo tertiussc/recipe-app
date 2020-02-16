@@ -2,12 +2,12 @@ import { OnInit, EventEmitter } from '@angular/core';
 
 import { Ingredient } from '../shared/ingredient.modal'
 
-export class ShoppingListService implements OnInit {
+export class ShoppingListService {
     ingredientsChanged = new EventEmitter<Ingredient[]>()
     private ingredients: Ingredient[] = [
-        new Ingredient('Apples', 5),
-        new Ingredient('Tomatoes', 3),
-        new Ingredient('Onoins', 1)
+        new Ingredient('Apples', 100),
+        new Ingredient('Tomatoes', 300),
+        new Ingredient('Onions', 300)
     ];
 
     getIngredients() {
@@ -19,14 +19,11 @@ export class ShoppingListService implements OnInit {
         this.ingredientsChanged.emit(this.ingredients.slice())
     }
 
-    constructor() {
 
+    // Customer functions
+    addIngredients(ingredients: Ingredient[]) {
+        this.ingredients.push(...ingredients)
+        this.ingredientsChanged.emit(this.ingredients.slice())
     }
-
-    ngOnInit() {
-
-    }
-
-    // Customer funtions
 
 }

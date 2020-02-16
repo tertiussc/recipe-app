@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.modal';
 import { ShoppingListService } from './shopping-list.service';
 
@@ -8,6 +8,7 @@ import { ShoppingListService } from './shopping-list.service';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  ingredientsChanged = new EventEmitter<Ingredient[]>()
   ingredients: Ingredient[]
 
   constructor(private slService: ShoppingListService) { }
@@ -21,5 +22,7 @@ export class ShoppingListComponent implements OnInit {
         }
       )
   }
+
+
 
 }

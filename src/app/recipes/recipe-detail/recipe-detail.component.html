@@ -15,7 +15,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <div class="dropdown-item" href="#" disabled>Choose action</div>
                 <hr>
-                <a class="dropdown-item" href="#">To Shopping List</a>
+                <a class="dropdown-item" (click)="onAddToShoppingsList()" style="cursor: pointer;">To Shopping List</a>
                 <a class="dropdown-item" href="#">Edit Recipe</a>
                 <a class="dropdown-item" href="#">Delete Recipe</a>
             </div>
@@ -31,14 +31,15 @@
         </div> -->
         <!-- Recipe Details -->
         <div class="col-12">
-            {{recipe.description}}
-        </div>
-        <div class="col-12">
             <ul class="list-group-flush">
                 <li class="list-group-item bg-dark border-light" *ngFor="let ingredient of recipe.ingredients">
-                    {{ingredient.name}}<span class="badge badge-light ml-1">{{ingredient.amount}}</span>
+                    {{ingredient.name}}<span class="badge badge-light ml-1">{{ingredient.amount}} gm</span>
                 </li>
             </ul>
         </div>
+        <div class="col-12">
+            {{recipe.description}}
+        </div>
+
     </div>
 </div>
